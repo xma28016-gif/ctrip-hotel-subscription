@@ -1,0 +1,47 @@
+/* The final invitation is a separate, real-photo spherical scene. */
+.beach-scene { height: clamp(560px, 72svh, 760px); overflow-anchor: none; }
+.beach-scene .beach-poster { transition: opacity .4s ease; }
+.beach-scene.beach-ready .beach-poster { opacity: 0; }
+.beach-panorama { position: absolute; inset: 0; width: 100%; height: 100%; background: transparent; cursor: grab; touch-action: none; }
+.beach-panorama:active { cursor: grabbing; }
+.beach-panorama .pnlm-ui, .beach-panorama .pnlm-render-container { cursor: inherit; }
+.beach-panorama .pnlm-load-box, .beach-panorama .pnlm-error-msg, .beach-panorama .pnlm-about-msg { display: none !important; }
+.beach-panorama:focus-visible { outline: 2px solid #f6f3eb; outline-offset: -5px; }
+.beach-scene .closing-shade { pointer-events: none; z-index: 1; background: linear-gradient(180deg, #142d3540, #132d3548 55%, #102d397d), radial-gradient(ellipse at center, #1831354d, #18313500 75%); transition: background .3s; }
+.beach-scene .closing-content { z-index: 2; pointer-events: none; user-select: none; transition: opacity .3s ease, visibility .3s; padding: 95px 22px 105px; }
+.beach-scene .closing-content button { pointer-events: auto; }
+.beach-scene h2 { font-size: clamp(34px, 3.6vw, 54px); margin-top: 20px; line-height: 1.55; text-shadow: 0 2px 20px #16313a55; }
+.beach-scene .button { margin-top: 28px; }
+.beach-kicker { position: absolute; top: 28px; left: 36px; right: 36px; z-index: 2; display: flex; justify-content: space-between; gap: 15px; font-size: 9px; letter-spacing: .18em; color: #faf7ee; pointer-events: none; }
+.beach-kicker span { letter-spacing: .1em; }
+.beach-views { position: absolute; top: 53px; right: 36px; z-index: 3; display: flex; align-items: center; gap: 12px; font-size: 10px; color: #faf7ee; }
+.beach-views button { padding: 5px 0; background: transparent; color: inherit; border-bottom: 1px solid #faf7ee80; letter-spacing: .06em; }
+.beach-views button:hover { border-color: #faf7ee; }
+.beach-views span { opacity: .6; }
+.beach-scene:not(.beach-ready) .beach-views { display: none; }
+.beach-bottom { position: absolute; z-index: 3; left: 36px; right: 36px; bottom: 28px; display: flex; justify-content: space-between; align-items: end; gap: 20px; pointer-events: none; text-align: left; }
+.beach-caption { font-size: 10px; line-height: 1.8; letter-spacing: .035em; text-shadow: 0 1px 5px #102d3980; }
+.beach-credit { opacity: .78; font-size: 9px; margin-top: 3px; }
+.beach-controls { display: flex; align-items: center; padding: 4px; border: 1px solid #f6f3eb55; background: #18313b66; backdrop-filter: blur(10px); pointer-events: auto; flex-shrink: 0; }
+.beach-controls[hidden] { display: none; }
+.beach-controls button { display: grid; place-items: center; width: 38px; height: 38px; padding: 0; color: #faf7ee; background: transparent; font-size: 20px; transition: background .2s; }
+.beach-controls button:hover, .beach-controls button[aria-pressed="true"] { background: #f6f3eb20; }
+.beach-controls #beach-text-toggle { width: auto; min-width: 88px; padding: 0 12px; font-size: 10px; letter-spacing: .08em; }
+.beach-control-divider { width: 1px; height: 17px; background: #f6f3eb44; margin: 0 4px; }
+.beach-controls .icon { width: 17px; height: 17px; }
+.beach-scene.beach-immersed .closing-content { opacity: 0; visibility: hidden; }
+.beach-scene.beach-immersed .closing-shade { background: linear-gradient(180deg, #142d351a, transparent 40%, #102d3966); }
+.beach-touch-hint { display: none; }
+@media (hover: none), (pointer: coarse) { .beach-desktop-hint { display: none; } .beach-touch-hint { display: inline; } }
+@media (max-width: 600px) {
+  .beach-scene { height: 560px; }
+  .beach-scene h2 { font-size: 32px; }
+  .beach-kicker { top: 24px; left: 22px; right: 22px; font-size: 8px; }
+  .beach-views { right: 22px; top: 48px; font-size: 9px; }
+  .beach-bottom { left: 22px; right: 22px; bottom: 23px; flex-wrap: wrap; gap: 13px; }
+  .beach-caption { font-size: 9px; width: 100%; }
+  .beach-credit { font-size: 8px; }
+  .beach-controls { margin-left: auto; }
+  .beach-scene .closing-content { padding-bottom: 140px; }
+}
+@media (prefers-reduced-motion: reduce) { .beach-scene .beach-poster, .beach-scene .closing-content { transition: none; } }

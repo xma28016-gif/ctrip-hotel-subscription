@@ -1,0 +1,127 @@
+/* Only the opening scene changes; the editorial page uses styles.css. */
+.hero { overflow-anchor: none; }
+.hero-image { transition: opacity .6s ease; }
+.hero.panorama-ready .hero-image { opacity: 0; }
+.hero-panorama {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  cursor: grab;
+  touch-action: none;
+}
+.hero-panorama:active { cursor: grabbing; }
+/* A native image cursor follows immediately and leaves all controls clickable. */
+@media (hover: hover) and (pointer: fine) {
+  .hero,
+  .hero a,
+  .hero button,
+  .hero-panorama,
+  .hero-panorama:active,
+  .hero-panorama .pnlm-ui,
+  .hero-panorama .pnlm-render-container,
+  .site-header:not(.scrolled),
+  .site-header:not(.scrolled) a,
+  .site-header:not(.scrolled) button {
+    cursor: url('./assets/sailboat-cursor.png') 24 5, pointer;
+  }
+}
+.hero-panorama:focus-visible { outline-offset: -5px; }
+.hero-panorama .pnlm-render-container,
+.hero-panorama .pnlm-ui { cursor: inherit; }
+.hero-panorama .pnlm-load-box,
+.hero-panorama .pnlm-error-msg,
+.hero-panorama .pnlm-about-msg { display: none !important; }
+.hero-shade {
+  pointer-events: none;
+  background: linear-gradient(90deg, rgba(24, 29, 21, .62), rgba(24, 29, 21, .12) 72%),
+    linear-gradient(0deg, rgba(24, 29, 21, .62), transparent 45%, rgba(24, 29, 21, .28));
+}
+.hero-content { pointer-events: none; user-select: none; z-index: 2; }
+.hero-buttons a { pointer-events: auto; }
+.hero-bottom { pointer-events: none; z-index: 2; }
+.hero-bottom a { pointer-events: auto; }
+.hero-coordinate { visibility: hidden; }
+.panorama-tools {
+  position: absolute;
+  right: 48px;
+  bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 15px;
+  color: #f6f3eb;
+  z-index: 4;
+}
+.panorama-bottomline { display: flex; flex-direction: column; align-items: flex-end; gap: 15px; }
+.panorama-guide { display: flex; gap: 18px; padding-bottom: 10px; border-bottom: 1px solid #f6f3eb40; }
+.panorama-guide button { background: transparent; color: inherit; font-size: 11px; letter-spacing: .04em; padding: 5px 0; opacity: .8; }
+.panorama-guide button::before { content: ''; display: inline-block; width: 4px; height: 4px; border-radius: 50%; background: #e4d3b1; margin-right: 7px; vertical-align: middle; }
+.panorama-guide button:hover, .panorama-guide button[aria-expanded="true"] { opacity: 1; }
+.panorama-guide button[aria-expanded="true"]::before { box-shadow: 0 0 0 3px #e4d3b130; }
+.panorama-feedback { font-size: 10px; max-width: 300px; padding: 9px 13px; background: #253326c9; border: 1px solid #f6f3eb40; }
+.panorama-controls button[aria-pressed="true"] { background: #f6f3eb18; }
+.panorama-controls button:disabled { opacity: .5; }
+#panorama-orientation { flex-direction: column; gap: 0; }
+.panorama-orientation-label { font-size: 7px; line-height: 1.2; }
+.panorama-landmark { width: 38px; height: 38px; }
+.panorama-landmark button { width: 38px; height: 38px; position: relative; display: grid; place-items: center; color: #fffdf6; border: 1px solid #fffdf680; border-radius: 50%; background: #23312440; box-shadow: 0 0 0 7px #fffdf610; padding: 0; transition: background .2s; }
+.panorama-landmark button::before { content: ''; width: 7px; height: 7px; border-radius: 50%; background: #fffdf6; box-shadow: 0 0 9px #f8e6b4; }
+.panorama-landmark button:hover, .panorama-landmark button[aria-expanded="true"] { background: #f3e9cd40; }
+.panorama-landmark button span { position: absolute; left: 47px; top: 7px; white-space: nowrap; padding: 3px 8px; font-size: 10px; letter-spacing: .04em; background: #243224b3; border: 1px solid #f6f3eb40; }
+.panorama-detail { position: absolute; z-index: 4; top: 150px; right: 48px; width: 295px; color: #f6f3eb; background: #253326bd; backdrop-filter: blur(18px); border: 1px solid #f6f3eb55; padding: 22px 24px; box-shadow: 0 12px 40px #18221915; }
+.panorama-detail-kicker { font-size: 8px; letter-spacing: .18em; color: #e3cfab; padding-right: 20px; }
+.panorama-detail h2 { font-family: var(--serif); font-weight: 400; font-size: 23px; margin: 8px 0 10px; }
+#panorama-detail-copy { font-size: 11px; line-height: 1.9; color: #f6f3ebe6; }
+#panorama-detail-close { position: absolute; top: 12px; right: 10px; display: grid; place-items: center; width: 32px; height: 32px; color: inherit; background: transparent; }
+#panorama-detail-close .icon { width: 16px; height: 16px; }
+.panorama-hint { display: flex; align-items: center; gap: 12px; font-size: 11px; letter-spacing: .05em; pointer-events: none; }
+.panorama-hint small { display: block; font-size: 8px; opacity: .7; margin-top: 3px; }
+.panorama-orbit { display: grid; place-items: center; width: 43px; height: 43px; border: 1px solid #f6f3eb75; border-radius: 50%; font: 12px Georgia, serif; }
+.panorama-touch-hint { display: none; }
+.panorama-controls { display: flex; align-items: center; border: 1px solid #f6f3eb60; background: #25332660; backdrop-filter: blur(10px); }
+.panorama-controls button { display: flex; align-items: center; justify-content: center; gap: 8px; background: transparent; color: inherit; min-width: 43px; min-height: 43px; padding: 9px; }
+.panorama-controls button:hover { background: #f6f3eb20; }
+.panorama-controls .icon { width: 17px; height: 17px; }
+.panorama-controls .panorama-tour-toggle { padding: 10px 13px; font-size: 10px; letter-spacing: .04em; min-width: 113px; }
+.panorama-control-divider { height: 19px; border-left: 1px solid #f6f3eb40; }
+.panorama-status { position: absolute; right: 48px; bottom: 100px; font-size: 11px; max-width: 280px; padding: 11px 16px; background: #25332670; border: 1px solid #f6f3eb40; }
+@media (max-width: 800px) {
+  .panorama-tools { right: 26px; bottom: 82px; }
+  .panorama-status { right: 26px; }
+  .panorama-detail { top: 110px; right: 26px; width: 265px; }
+}
+@media (max-width: 480px) {
+  .hero-shade { background: linear-gradient(90deg, #18201580, #18201530), linear-gradient(0deg, #182015b0, transparent 55%, #18201555); }
+  .hero-content { top: 28%; }
+  .panorama-tools { left: 24px; right: 24px; bottom: 76px; align-items: stretch; gap: 12px; }
+  .panorama-bottomline { flex-direction: row; justify-content: space-between; align-items: center; gap: 8px; }
+  .panorama-guide { justify-content: space-between; gap: 7px; padding-bottom: 8px; }
+  .panorama-guide button { font-size: 9px; letter-spacing: 0; }
+  .panorama-guide button::before { margin-right: 5px; width: 3px; height: 3px; }
+  .panorama-detail { top: 94px; left: 24px; right: 24px; width: auto; padding: 15px 19px; }
+  .panorama-detail h2 { font-size: 20px; margin: 4px 0 6px; }
+  #panorama-detail-copy { font-size: 10px; line-height: 1.8; }
+  .panorama-landmark button span { display: none; }
+  .panorama-hint { font-size: 8px; letter-spacing: 0; gap: 7px; }
+  .panorama-orbit { width: 34px; height: 34px; font-size: 10px; }
+  .panorama-desktop-hint,
+  .panorama-hint small { display: none; }
+  .panorama-touch-hint { display: block; width: 54px; line-height: 1.8; }
+  .panorama-controls button { min-width: 34px; min-height: 40px; padding: 8px; }
+  .panorama-controls .panorama-tour-toggle { min-width: 38px; padding: 8px; }
+  .panorama-tour-toggle [data-tour-label] { display: none; }
+  .panorama-status { left: 24px; right: auto; bottom: 89px; max-width: calc(100% - 48px); font-size: 10px; }
+  .hero-bottom { align-items: end; }
+  .photo-credit { max-width: 145px; }
+}
+@media (pointer: coarse) and (min-width: 481px) {
+  .panorama-desktop-hint { display: none; }
+  .panorama-touch-hint { display: inline; }
+}
+@media (hover: hover) and (pointer: fine) and (max-width: 480px) {
+  .panorama-desktop-hint { display: block; width: 76px; line-height: 1.8; }
+  .panorama-touch-hint { display: none; }
+}
+@media (prefers-reduced-motion: reduce) { .hero-image { transition: none; } }

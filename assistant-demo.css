@@ -1,0 +1,37 @@
+.phone{height:clamp(520px,calc(100svh - 170px),760px);min-height:0}
+.phone-content{height:calc(100% - 65px);overflow-y:auto;overscroll-behavior:contain;scrollbar-width:none}
+.phone-content::-webkit-scrollbar{display:none}
+.phone-timeline{min-height:122px}
+.assistant-demo-controls{display:flex;align-items:center;justify-content:space-between;width:340px;gap:12px;margin-top:18px;color:#68795e}
+.assistant-demo-status{display:flex;align-items:center;gap:6px;font-size:9px;line-height:1.6}
+.assistant-demo-status .status-dot{flex-shrink:0}
+.assistant-demo-actions{display:flex;gap:12px;flex-shrink:0}
+.assistant-demo-actions button{display:flex;align-items:center;gap:4px;padding:5px 0;background:transparent;color:#526946;font-size:9px;border-bottom:1px solid #9aaa8880}
+.assistant-demo-actions button>span:first-child{font-size:13px;line-height:1}
+.phone-stage[data-demo-state="playing"] .assistant-demo-status .status-dot{animation:assistant-status-breathe 2.4s ease-in-out infinite}
+.phone-demo-touch{position:absolute;left:0;top:0;z-index:4;width:36px;height:44px;opacity:0;pointer-events:none;transform:translate(var(--touch-x,150px),var(--touch-y,170px));transition:transform .7s cubic-bezier(.22,.7,.2,1),opacity .2s}
+.phone-demo-touch.is-visible{opacity:1}
+.phone-demo-touch svg{position:relative;width:36px;height:44px;fill:#fffdf3;stroke:#7a865e;stroke-width:1.35;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 3px 5px #23321c28)}
+.phone-demo-ring{position:absolute;left:14px;top:7px;width:32px;height:32px;border:1px solid #7b9565;border-radius:50%;opacity:0;transform:translate(-50%,-50%)}
+.phone-demo-touch.is-tapping .phone-demo-ring{animation:assistant-touch-ring .65s ease-out}
+.phone-demo-touch.is-tapping svg{animation:assistant-touch-press .45s ease-out}
+.phone-demo-notice{position:absolute;left:19px;right:19px;bottom:28px;display:flex;align-items:center;justify-content:center;gap:7px;padding:12px 10px;border:1px solid #c8d7b7;background:#f4f7eefa;color:#4b653e;border-radius:9px;font-size:10px;box-shadow:0 9px 24px #334a241c;z-index:3;opacity:0;transform:translateY(9px);pointer-events:none;transition:opacity .35s,transform .35s}
+.phone-demo-notice.is-visible{opacity:1;transform:translateY(0)}
+.phone-demo-notice .icon{width:16px;height:16px}
+.route-demo-line{opacity:0}
+.route-map.is-demonstrating .route-demo-line{opacity:1;stroke-dasharray:1;stroke-dashoffset:1;animation:assistant-route-draw 2.4s ease-in-out forwards}
+.route-map.is-demonstrating .route-line{opacity:.25}
+.route-map.is-demonstrating .route-end{transform-box:fill-box;transform-origin:center;animation:assistant-route-arrive .8s 2.1s ease-out}
+.phone-detail-card.demo-detail-enter{animation:assistant-detail-enter .45s ease-out}
+#timeline-events .demo-highlight{position:relative;padding:8px 6px;border-radius:5px;background:#e3ecd7;animation:assistant-timeline-enter .5s ease-out}
+.phone-footnote{margin-top:16px}
+@keyframes assistant-status-breathe{50%{opacity:.4}}
+@keyframes assistant-touch-ring{0%{opacity:1;transform:translate(-50%,-50%) scale(.35)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.75)}}
+@keyframes assistant-touch-press{45%{transform:scale(.9);transform-origin:14px 7px}}
+@keyframes assistant-route-draw{to{stroke-dashoffset:0}}
+@keyframes assistant-route-arrive{50%{transform:scale(1.4)}}
+@keyframes assistant-detail-enter{from{opacity:.45;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@keyframes assistant-timeline-enter{from{opacity:0;transform:translateY(7px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:480px){.phone{height:clamp(520px,calc(100svh - 170px),720px)}.assistant-demo-controls{width:325px;max-width:100%;gap:8px}.assistant-demo-status{font-size:8px}.assistant-demo-actions{gap:10px}.phone-demo-notice{left:16px;right:16px;font-size:9px}}
+@media(max-width:360px){.assistant-demo-controls{width:calc(100vw - 44px)}}
+@media(prefers-reduced-motion:reduce){.phone-demo-touch{display:none}.phone-demo-notice{transition:none}.phone-stage[data-demo-state="playing"] .status-dot{animation:none}.route-map.is-demonstrating .route-demo-line{stroke-dashoffset:0;animation:none}}

@@ -1,0 +1,326 @@
+{
+  "retrieved_on": "2026-10-11",
+  "notes": "Real photography reference assets; original rights retained. Refer to ASSETS.md before redistribution.",
+  "photos": [
+    {
+      "file": "photos/sea-room.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c2bca4089c858964122365_DSC00682-2.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/sea-lounge.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c2bd5c5451b1c691462946_DSC09938-2.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/sea-terrace.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c2bd7534a8e7a98c775f0d_DSC09932-2.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/wood-room.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c3b0d64f1096fbfbd78913_DSC09956-Avec%20accentuation-Bruit-2.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/wood-bed.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c3b0d55c4a749203be10ff_DSC09951-Avec%20accentuation-Bruit-2.jpg",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/wood-terrace.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/69c3b0e391e7eb3c11e6ebbd_DSC09949-2.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/spa.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/69c16841d8b173227ea6fe23_f15bfd33eb47a2f83b6b74753c96bac3_Kube_sainttropez_services_1.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/spa-detail.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/69c3df884f0b0689860becb7_6f97752df2ad18ef0bf65e1a43996c7d_Kube_sainttrropez_spa_myblend_2.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/coast.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/6a1ee3944b4b3b3b263b0dbc_3ec8d0052e351028547bb241fad7808d_aurelienstudio-kujtenV2-5.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/pool.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/69c122f05101301b0245c824_5789b0da2cf29c968721c2e772ba318a_home-cta.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/fitness.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c7/6a7d9174c689fab3641524b1_69cbea279141810a99c71683_Kube_sainttropez_fitness_00.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/restaurant.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/6a39470f0ea821374bad7fcd_Le-petit-celestin-homepage-1.webp",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/dining.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/6a39470d81aea90ec63b0c58_5d2af85aa3998afc3eac9757b171ff49_aurelienstudio-petit-c%C3%A9lestin-25%20copie.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/aerial.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/69cf6e582483aa86383b4529_673bf1227daa2ba1445a1bd65ff9c6d4_Kube_sainttropez_2.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/lobby.webp",
+      "original_url": "https://mozcp.lenegresco.com/wp-content/uploads/2025/05/Le-Negresco-Salon-Royal-46-c-Gregoire-Gardette-HD.jpg",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/lobby-wide.webp",
+      "original_url": "https://mozcp.lenegresco.com/wp-content/uploads/2025/05/Le-Negresco-Salon-Royal-28-c-Gregoire-Gardette-HD.jpg",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/food-steak.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/6a39470f60766fd43cdbbf96_a1355ddb75065655522420a88f19ead3_aurelienstudio-petit-c%C3%A9lestin-7%20copie.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/food-seafood.webp",
+      "original_url": "https://cdn.prod.website-files.com/69c122f05101301b0245c7c6/6a39470f48b53520da8df6a3_25221d10827883ccef7624499d1ca35a_aurelienstudio-petit-c%C3%A9lestin-6%20copie.avif",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/restaurant-night.webp",
+      "original_url": "https://www.thehotelguru.com/_images/c8/a0/c8a05d8a3e59ae4777d4f1173d55a1c1/kube-hotel-s1180x560.jpg",
+      "source_type": "third-party hotel photography",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/family-room.webp",
+      "original_url": "https://www.rice-hotel.com/upload/share_file/large/685.jpg",
+      "source_type": "Rice Resort Hotel official real guestroom photography",
+      "code_license_applies": false,
+      "source_page": "https://www.rice-hotel.com/room/quad/family-mimi/",
+      "retrieved_on": "2026-10-11",
+      "description": "Green indoor slide, bunk beds, teddy bear and child-sized table and chairs",
+      "changes": "WebP compression only; no generated or composited facilities"
+    },
+    {
+      "file": "photos/family-detail.webp",
+      "original_url": "https://www.rice-hotel.com/upload/share_file/large/686.jpg",
+      "source_type": "Rice Resort Hotel official real guestroom photography",
+      "code_license_applies": false,
+      "source_page": "https://www.rice-hotel.com/room/quad/family-mimi/",
+      "retrieved_on": "2026-10-11",
+      "description": "Indoor slide, play tent, animal hopper toy and child-sized table and chairs",
+      "changes": "WebP compression only; no generated or composited facilities"
+    },
+    {
+      "file": "photos/food-champagne.webp",
+      "original_url": "https://assets.hiltonstatic.com/hilton-asset-cache/image/upload/c_fill%2Cw_647%2Ch_455%2Cq_80%2Cf_auto%2Cg_auto/Imagery/Property%20Photography/Waldorf%20Astoria/C/CDGTPWA/Champagne_Trianon_Palace_Versailles_Ao_t_2021___Ronan_Le_May_2.jpg",
+      "source_type": "Waldorf Astoria Versailles photography by Ronan Le May",
+      "code_license_applies": false
+    },
+    {
+      "file": "photos/lobby-panorama-8k.webp",
+      "originalURL": "https://dl.polyhaven.org/file/ph-assets/HDRIs/extra/Tonemapped%20JPG/entrance_hall.jpg",
+      "source_page": "https://polyhaven.com/a/entrance_hall",
+      "author": "Sergej Majboroda",
+      "source_type": "real 360-degree photography",
+      "license": "CC0-1.0",
+      "code_license_applies": false,
+      "changes": "Resized and WebP compression"
+    },
+    {
+      "file": "photos/lobby-panorama-4k.webp",
+      "originalURL": "https://dl.polyhaven.org/file/ph-assets/HDRIs/extra/Tonemapped%20JPG/entrance_hall.jpg",
+      "source_page": "https://polyhaven.com/a/entrance_hall",
+      "author": "Sergej Majboroda",
+      "source_type": "real 360-degree photography",
+      "license": "CC0-1.0",
+      "code_license_applies": false,
+      "changes": "Resized and WebP compression"
+    },
+    {
+      "file": "photos/lobby-panorama-poster.webp",
+      "originalURL": "https://dl.polyhaven.org/file/ph-assets/HDRIs/extra/Tonemapped%20JPG/entrance_hall.jpg",
+      "source_page": "https://polyhaven.com/a/entrance_hall",
+      "author": "Sergej Majboroda",
+      "source_type": "real 360-degree photography",
+      "license": "CC0-1.0",
+      "code_license_applies": false,
+      "changes": "Rectilinear projection for static fallback, resized and WebP compression"
+    },
+    {
+      "file": "photos/palace-lobby-8k.webp",
+      "original_url": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/dining_vr.xml",
+      "source_page": "https://vr.peekpeek.com/millennium_biltmore_la/Dining.html",
+      "hotel_source": "https://www.millenniumhotels.com/zh/destinations/united-states/united-states/los-angeles/millennium-biltmore-hotel-los-angeles/dining-information/rendezvous-court-cafe/",
+      "provider": "The Biltmore Los Angeles / PeekPeek VR",
+      "scene": "Rendezvous Court (pano10)",
+      "source_type": "real 360-degree hotel photography",
+      "source_tiles": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/_10_rendezvous_court_10/{face}/2/{row}_{column}.jpg",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 3072,
+      "tile_size": 512,
+      "code_license_applies": false,
+      "rights": "Third-party photography; no open redistribution license asserted.",
+      "changes": "Equirectangular reprojection of original same-location cube photographs; resizing and WebP compression. No generated scene contents."
+    },
+    {
+      "file": "photos/palace-lobby-4k.webp",
+      "original_url": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/dining_vr.xml",
+      "source_page": "https://vr.peekpeek.com/millennium_biltmore_la/Dining.html",
+      "hotel_source": "https://www.millenniumhotels.com/zh/destinations/united-states/united-states/los-angeles/millennium-biltmore-hotel-los-angeles/dining-information/rendezvous-court-cafe/",
+      "provider": "The Biltmore Los Angeles / PeekPeek VR",
+      "scene": "Rendezvous Court (pano10)",
+      "source_type": "real 360-degree hotel photography",
+      "source_tiles": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/_10_rendezvous_court_10/{face}/2/{row}_{column}.jpg",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 3072,
+      "tile_size": 512,
+      "code_license_applies": false,
+      "rights": "Third-party photography; no open redistribution license asserted.",
+      "changes": "Equirectangular reprojection of original same-location cube photographs; resizing and WebP compression. No generated scene contents."
+    },
+    {
+      "file": "photos/palace-lobby-poster.webp",
+      "original_url": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/dining_vr.xml",
+      "source_page": "https://vr.peekpeek.com/millennium_biltmore_la/Dining.html",
+      "hotel_source": "https://www.millenniumhotels.com/zh/destinations/united-states/united-states/los-angeles/millennium-biltmore-hotel-los-angeles/dining-information/rendezvous-court-cafe/",
+      "provider": "The Biltmore Los Angeles / PeekPeek VR",
+      "scene": "Rendezvous Court (pano10)",
+      "source_type": "real 360-degree hotel photography",
+      "source_tiles": "https://vr.peekpeek.com/millennium_biltmore_la/diningdata/_10_rendezvous_court_10/{face}/2/{row}_{column}.jpg",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 3072,
+      "tile_size": 512,
+      "code_license_applies": false,
+      "rights": "Third-party photography; no open redistribution license asserted.",
+      "changes": "Rectilinear projection of original same-location cube photographs; WebP compression."
+    },
+    {
+      "original_url": "https://www.360cities.net/embed_iframe/water-hammock-at-a-white-sand-beach-in-bandos-maldives.xml",
+      "source_page": "https://www.360cities.net/en/image/water-hammock-at-a-white-sand-beach-in-bandos-maldives",
+      "author": "Branimir Minkov",
+      "location": "Bandos, Maldives",
+      "source_type": "real 360-degree beach photography",
+      "original_resolution": [
+        10492,
+        5246
+      ],
+      "source_tiles": "https://cf1.360cities.net/pano/bradm/01585961_Panorama.jpg/cube/{face}/tile/512/3/{row}/{column}.jpg?orig=",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 2623,
+      "retrieved_on": "2026-10-11",
+      "description": "Clear ocean, white sand beach with sun loungers, palm trees, and two adult vacationers including a woman relaxing at a water hammock",
+      "code_license_applies": false,
+      "rights": "Copyright Branimir Minkov. Public-viewing source; no open redistribution or commercial-use license asserted.",
+      "file": "photos/beach-panorama-8k.webp",
+      "changes": "Equirectangular reprojection of the same six-face photograph, resized and WebP compressed; no generated or composited contents."
+    },
+    {
+      "original_url": "https://www.360cities.net/embed_iframe/water-hammock-at-a-white-sand-beach-in-bandos-maldives.xml",
+      "source_page": "https://www.360cities.net/en/image/water-hammock-at-a-white-sand-beach-in-bandos-maldives",
+      "author": "Branimir Minkov",
+      "location": "Bandos, Maldives",
+      "source_type": "real 360-degree beach photography",
+      "original_resolution": [
+        10492,
+        5246
+      ],
+      "source_tiles": "https://cf1.360cities.net/pano/bradm/01585961_Panorama.jpg/cube/{face}/tile/512/3/{row}/{column}.jpg?orig=",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 2623,
+      "retrieved_on": "2026-10-11",
+      "description": "Clear ocean, white sand beach with sun loungers, palm trees, and two adult vacationers including a woman relaxing at a water hammock",
+      "code_license_applies": false,
+      "rights": "Copyright Branimir Minkov. Public-viewing source; no open redistribution or commercial-use license asserted.",
+      "file": "photos/beach-panorama-4k.webp",
+      "changes": "Equirectangular reprojection of the same six-face photograph, resized and WebP compressed; no generated or composited contents."
+    },
+    {
+      "original_url": "https://www.360cities.net/embed_iframe/water-hammock-at-a-white-sand-beach-in-bandos-maldives.xml",
+      "source_page": "https://www.360cities.net/en/image/water-hammock-at-a-white-sand-beach-in-bandos-maldives",
+      "author": "Branimir Minkov",
+      "location": "Bandos, Maldives",
+      "source_type": "real 360-degree beach photography",
+      "original_resolution": [
+        10492,
+        5246
+      ],
+      "source_tiles": "https://cf1.360cities.net/pano/bradm/01585961_Panorama.jpg/cube/{face}/tile/512/3/{row}/{column}.jpg?orig=",
+      "cube_order": [
+        "front",
+        "right",
+        "back",
+        "left",
+        "up",
+        "down"
+      ],
+      "cube_face_size": 2623,
+      "retrieved_on": "2026-10-11",
+      "description": "Clear ocean, white sand beach with sun loungers, palm trees, and two adult vacationers including a woman relaxing at a water hammock",
+      "code_license_applies": false,
+      "rights": "Copyright Branimir Minkov. Public-viewing source; no open redistribution or commercial-use license asserted.",
+      "file": "photos/beach-panorama-poster.webp",
+      "changes": "Rectilinear projection of the same six-face photograph and WebP compression; no generated or composited contents."
+    }
+  ]
+}
