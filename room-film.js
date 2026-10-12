@@ -45,7 +45,7 @@
     frame = 0;
     lastTick = 0;
     videos.forEach(video => video.pause());
-    if (film.dataset.state !== 'error') setState('paused', userPaused ? '已暂停 · 随时继续' : '静音看房 · 完整画幅');
+    if (film.dataset.state !== 'error') setState('paused', userPaused ? '已暂停 · 随时继续' : '静音看房 · 随时播放');
   }
 
   async function start(manual = false) {
@@ -186,7 +186,7 @@
   reducedMotion.addEventListener('change', () => { manuallyStarted = false; if (mayPlay()) start(); else stop(); });
   window.addEventListener('pagehide', () => { disposed = true; stop(); });
   window.addEventListener('pageshow', () => { disposed = false; if (mayPlay()) start(); });
-  setState('paused', '静音看房 · 完整画幅');
+  setState('paused', '静音看房 · 随时播放');
   }
   document.querySelectorAll('[data-room-film]').forEach(initializeRoomFilm);
 })();

@@ -54,6 +54,7 @@ npm start
 - `app.js`：房型数据、图库、预订计算、助手示例。
 - `assistant-demo.js` 与 `assistant-demo.css`：手机内使用演示与播放控制。
 - `room-film.js` 与 `room-film.css`：海景房和自然原木房视频的独立静音播放、预加载、叠化循环、暂停和全屏。
+- 页面内的视频和封面保持比例铺满展示区域；海景视频在宽屏限高时裁切少量上下边缘，避免侧边留白。全屏模式可查看完整画幅。
 - `assets/videos/`：用户提供视频的网页优化版本与同一视频的首帧封面，保留原画幅；按用户要求移除视频角落的两个标识。AI 动态示意不标称为真实拍摄。
 - `panorama.js` 与 `panorama.css`：首屏全景交互与控制栏样式。
 - `beach-panorama.js` 与 `beach-panorama.css`：页尾海滩全景与控制栏。
