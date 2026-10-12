@@ -32,7 +32,8 @@ async function view(page) {
   return page.evaluate(() => ({ yaw: window.lobbyPanorama.getYaw(), pitch: window.lobbyPanorama.getPitch(), hfov: window.lobbyPanorama.getHfov() }));
 }
 async function reset(page) {
-  await page.locator('#panorama-reset').click();
+  await page.locator('#lobby-panorama').focus();
+  await page.keyboard.press('Home');
   await page.waitForFunction(() => Math.abs(window.lobbyPanorama.getYaw() - 90) < .1 && Math.abs(window.lobbyPanorama.getPitch() - 8) < .1);
 }
 
@@ -69,11 +70,11 @@ try {
   await page.waitForTimeout(250);
   assert.ok(difference((await view(page)).yaw, beforeButtonHover.yaw) < .05);
   assert.equal(await page.locator('#lobby-panorama').getAttribute('data-looking'), 'false');
-  assert.match(await page.locator('.hero-buttons a').first().evaluate(el => getComputedStyle(el).cursor), /sailboat-cursor\.png/);
-  const cursor = await page.request.get(`${base}/assets/sailboat-cursor.png`);
+  assert.match(await page.locator('.hero-buttons a').first().evaluate(el => getComputedStyle(el).cursor), /white-pointer\.png/);
+  const cursor = await page.request.get(`${base}/assets/white-pointer.png`);
   assert.equal(cursor.status(), 200);
   assert.match(cursor.headers()['content-type'], /image\/png/);
-  checks.push('Moving the sailboat toward left, right and upper edges turns the view without holding a button; the central area and navigation remain still.');
+  checks.push('Moving the pointer toward left, right and upper edges turns the view without holding a button; the central area and navigation remain still.');
 
   await reset(page);
   const stairHotspot = await page.locator('.panorama-landmark [data-panorama-landmark="stairs"]').boundingBox();
@@ -122,10 +123,12 @@ try {
   await page.mouse.wheel(0, 300);
   await page.waitForFunction(fov => window.lobbyPanorama.getHfov() > fov + 3, zoomedIn);
   assert.equal(await page.evaluate(() => window.scrollY), 0);
-  await page.locator('[data-panorama-zoom="in"]').click();
+  await page.locator('#lobby-panorama').focus();
   const firstButtonZoom = (await view(page)).hfov;
+  await page.keyboard.down('+');
   await page.waitForFunction(fov => window.lobbyPanorama.getHfov() < fov - 3, firstButtonZoom);
-  checks.push('Mouse wheel and zoom buttons change the field of view without scrolling the page.');
+  await page.keyboard.up('+');
+  checks.push('Mouse wheel and keyboard zoom change the field of view without scrolling the page.');
 
   await page.evaluate(() => { window.lobbyPanorama.setHfov(1, false); });
   assert.ok((await view(page)).hfov >= 38);
@@ -150,13 +153,12 @@ try {
   assert.ok(difference((await view(page)).yaw, 175) > 20);
   assert.ok(await page.locator('#lobby-panorama canvas').isVisible());
   await reset(page);
-  await page.locator('#panorama-tour-toggle').click();
-  assert.equal(await page.locator('#lobby-panorama').getAttribute('data-touring'), 'true');
-  await page.locator('#panorama-tour-toggle').click();
   assert.equal(await page.locator('#lobby-panorama').getAttribute('data-touring'), 'false');
-  checks.push('The yaw wraps across 360°; visitors can explicitly resume or pause the tour.');
+  assert.equal(await page.locator('.panorama-bottomline').isVisible(), false);
+  assert.equal(await page.locator('.hero-bottom .photo-credit').count(), 0);
+  checks.push('The yaw wraps across 360° while the removed hints, toolbar and hero credit remain absent.');
 
-  await page.locator('#panorama-tour-toggle').click();
+  await load(page);
   await page.evaluate(() => window.scrollTo(0, document.querySelector('#rooms').offsetTop));
   await page.waitForFunction(() => document.querySelector('#lobby-panorama').dataset.touring === 'false');
   await page.evaluate(() => window.scrollTo(0, 0));
@@ -236,29 +238,8 @@ try {
   });
   await load(sensor);
   assert.equal(await sensor.evaluate(() => window.sensorPermissionCalls), 0);
-  await sensor.locator('#panorama-orientation').tap();
-  await sensor.waitForFunction(() => document.querySelector('#panorama-feedback').textContent.includes('体感未开启'));
-  assert.equal(await sensor.locator('#panorama-orientation').getAttribute('aria-pressed'), 'false');
-  await sensor.evaluate(() => { window.sensorPermission = 'granted'; });
-  await sensor.locator('#panorama-orientation').tap();
-  await sensor.waitForFunction(() => document.querySelector('#lobby-panorama').dataset.orientation === 'true');
-  const pose = (alpha, beta) => sensor.evaluate(({ alpha, beta }) => {
-    window.dispatchEvent(new DeviceOrientationEvent('deviceorientation', { alpha, beta, gamma: 0 }));
-  }, { alpha, beta });
-  await pose(0, 90);
-  const calibrated = await view(sensor);
-  await pose(25, 110);
-  await sensor.waitForFunction(initial => Math.abs(window.lobbyPanorama.getPitch() - initial.pitch) > 4 && Math.abs(window.lobbyPanorama.getYaw() - initial.yaw) > 4, calibrated);
-  await sensor.locator('#panorama-orientation').tap();
-  assert.equal(await sensor.locator('#panorama-orientation').getAttribute('aria-pressed'), 'false');
-  const afterSensorStop = await view(sensor);
-  await pose(90, 30);
-  await sensor.waitForTimeout(200);
-  assert.ok(difference((await view(sensor)).yaw, afterSensorStop.yaw) < .1);
-  await sensor.locator('#panorama-orientation').tap();
-  await sensor.waitForFunction(() => document.querySelector('#lobby-panorama').dataset.orientation === 'true');
-  await sensor.waitForFunction(() => document.querySelector('#panorama-feedback').textContent.includes('未读取到体感信息'));
-  checks.push('Simulated mobile sensors require an explicit opt-in: denied permission and missing sensor data fall back gracefully; granted orientation pans smoothly and stops on opt-out. No permission is requested on load.');
+  assert.equal(await sensor.locator('#panorama-orientation').isVisible(), false);
+  checks.push('The hidden control strip does not request device sensor permissions.');
 
   const fallback = await createPage({ reducedMotion: 'reduce' });
   await fallback.addInitScript(() => { const original = HTMLCanvasElement.prototype.getContext; HTMLCanvasElement.prototype.getContext = function(type, ...args) { return /webgl/i.test(type) ? null : original.call(this, type, ...args); }; });

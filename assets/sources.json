@@ -1,6 +1,6 @@
 {
   "retrieved_on": "2026-10-11",
-  "notes": "Real photography reference assets; original rights retained. Refer to ASSETS.md before redistribution.",
+  "notes": "Hotel photography and a user-provided AI room video; original rights retained. Refer to ASSETS.md before redistribution.",
   "photos": [
     {
       "file": "photos/sea-room.webp",
@@ -321,6 +321,36 @@
       "rights": "Copyright Branimir Minkov. Public-viewing source; no open redistribution or commercial-use license asserted.",
       "file": "photos/beach-panorama-poster.webp",
       "changes": "Rectilinear projection of the same six-face photograph and WebP compression; no generated or composited contents."
+    }
+  ],
+  "videos": [
+    {
+      "files": [
+        "videos/wood-room-film-hd.mp4",
+        "videos/wood-room-film-mobile.mp4",
+        "videos/wood-room-film-poster.webp"
+      ],
+      "source_type": "User-provided Jimeng AI room walkthrough; conceptual motion demonstration",
+      "provided_on": "2026-10-12",
+      "original_width": 1504,
+      "original_height": 640,
+      "original_duration_seconds": 6.183333,
+      "processing": "Full-frame fast-start web MP4; two corner marks removed with local pixel repair at user request; matching first-frame poster; AI motion demonstration",
+      "code_license_applies": false
+    },
+    {
+      "files": [
+        "videos/sea-room-film-hd.mp4",
+        "videos/sea-room-film-mobile.mp4",
+        "videos/sea-room-film-poster.webp"
+      ],
+      "source_type": "User-provided Jimeng AI seaside suite walkthrough; conceptual motion demonstration",
+      "provided_on": "2026-10-12",
+      "original_width": 1120,
+      "original_height": 832,
+      "original_duration_seconds": 5.18,
+      "processing": "Full-frame fast-start web MP4; two corner marks locally repaired at user request; matching processed first-frame poster; original room photographs retained separately",
+      "code_license_applies": false
     }
   ]
 }

@@ -5,7 +5,7 @@
   "description": "A photography-led hotel landing page with local booking and itinerary demos.",
   "scripts": {
     "start": "node scripts/serve.mjs",
-    "check": "node --check app.js && node --check assistant-demo.js && node --check panorama.js && node --check beach-panorama.js && node --check scripts/serve.mjs"
+    "check": "node --check app.js && node --check assistant-demo.js && node --check panorama.js && node --check beach-panorama.js && node --check room-film.js && node --check pointer.js && node --check scripts/serve.mjs"
   },
   "engines": {
     "node": ">=18"

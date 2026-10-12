@@ -222,7 +222,7 @@ document.addEventListener('click', event => {
   if (target.hasAttribute('data-close')) { target.closest('dialog').close(); return; }
   if (target.hasAttribute('data-book')) { startBooking(target.dataset.book || 'sea'); return; }
   if (target.dataset.service) { openGallery({ ...services[target.dataset.service], serviceId: target.dataset.service }); return; }
-  if (target.dataset.gallery) { const id = target.dataset.gallery; openGallery({ ...rooms[id], title: rooms[id].name, eyebrow: 'YOUR OWN RETREAT', description: '真实客房摄影，作为房型体验参考。每晚价格为人民币示例价，可继续体验日期选择与费用计算。', index: roomPhotoIndexes[id], roomId: id }); return; }
+  if (target.dataset.gallery) { const id = target.dataset.gallery; const chosen = Number(target.dataset.galleryIndex); const index = target.hasAttribute('data-gallery-index') && Number.isInteger(chosen) && chosen >= 0 && chosen < rooms[id].photos.length ? chosen : roomPhotoIndexes[id]; openGallery({ ...rooms[id], title: rooms[id].name, eyebrow: 'YOUR OWN RETREAT', description: '真实客房摄影，作为房型体验参考。每晚价格为人民币示例价，可继续体验日期选择与费用计算。', index, roomId: id }); return; }
   if (target.dataset.photoPrev) { rotateRoomPhoto(target.dataset.photoPrev, -1); return; }
   if (target.dataset.photoNext) { rotateRoomPhoto(target.dataset.photoNext, 1); return; }
   if (target.hasAttribute('data-dialog-prev') || target.hasAttribute('data-dialog-next')) { const direction = target.hasAttribute('data-dialog-next') ? 1 : -1; dialogGallery.index = (dialogGallery.index + direction + dialogGallery.photos.length) % dialogGallery.photos.length; renderDialogPhoto(); return; }

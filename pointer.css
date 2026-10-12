@@ -1,0 +1,8 @@
+@media(hover:hover) and (pointer:fine){html,html body,html body *{cursor:url('./assets/white-pointer.png') 3 2,auto!important}}
+.cursor-water-layer{position:fixed;inset:0;z-index:2147483646;pointer-events:none;overflow:hidden;contain:strict}
+.cursor-water-wave{position:absolute;--wave-size:12px;--wave-scale:4.3;pointer-events:none}
+.cursor-water-wave::before,.cursor-water-wave::after{content:"";position:absolute;width:var(--wave-size);height:var(--wave-size);left:calc(var(--wave-size)/-2);top:calc(var(--wave-size)/-2);border:1px solid #ffffffb8;border-radius:50%;box-shadow:0 0 0 .6px #55726440,inset 0 0 3px #e3f3e84d;opacity:0;animation:cursor-water 800ms cubic-bezier(.2,.55,.35,1) forwards}
+.cursor-water-wave::after{animation-delay:100ms;border-color:#ffffff85}
+.cursor-water-wave.is-press{--wave-size:18px;--wave-scale:5.2}
+@keyframes cursor-water{0%{transform:scale(.5);opacity:.72}100%{transform:scale(var(--wave-scale));opacity:0}}
+@media(prefers-reduced-motion:reduce){.cursor-water-layer{display:none}}

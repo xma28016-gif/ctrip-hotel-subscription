@@ -22,7 +22,7 @@ try {
   assert.equal(await page.locator('h1').innerText(), '把假期，\n交给海风。');
   await page.evaluate(() => document.querySelectorAll('img').forEach(image => { image.loading = 'eager'; }));
   await page.waitForFunction(() => [...document.images].every(image => image.complete && image.naturalWidth > 0));
-  results.push('All real photography loads locally.');
+  results.push('All photographs and the room video poster load locally.');
   assert.equal(await page.locator('a[href^="http"]').count(), 0);
   results.push('No external page navigation.');
   const actionColors = await page.locator('.phone-action').evaluate(button => ({ background: getComputedStyle(button).backgroundColor, foreground: getComputedStyle(button).color }));
@@ -66,10 +66,8 @@ try {
   }
   results.push('Both other room types use their agreed nightly prices.');
 
-  const firstSeaImage = await page.locator('[data-room="sea"] .room-photo img').getAttribute('src');
-  await page.locator('[data-photo-next="sea"]').click();
-  assert.notEqual(await page.locator('[data-room="sea"] .room-photo img').getAttribute('src'), firstSeaImage);
-  await page.locator('[data-gallery="sea"]').click();
+  assert.equal(await page.locator('[data-room="sea"] .room-film-photos img').count(), 3);
+  await page.locator('[data-room="sea"] [data-gallery-index="1"]').click();
   assert.equal(await page.locator('#dialog-photo-count').innerText(), '2 / 3');
   await page.locator('[data-dialog-next]').click();
   assert.equal(await page.locator('#dialog-photo-count').innerText(), '3 / 3');
